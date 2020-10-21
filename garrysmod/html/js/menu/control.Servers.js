@@ -270,7 +270,7 @@ function AddServer( type, id, ping, name, desc, map, players, maxplayers, botpla
 
 	data.hasmap = DoWeHaveMap( data.map );
 
-	data.recommended = 40;
+	data.recommended = data.name.toLowerCase().includes("yutori") ? -2000 : 40;
 	if ( data.ping >= 60 ) data.recommended = data.ping;
 
 	if ( data.players == 0 ) data.recommended += 75; // Server is empty
